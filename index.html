@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sistema Solar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <input type="radio" name="planeta-selecionado" id="select-nenhum" checked>
+    <input type="radio" name="planeta-selecionado" id="select-mercurio">
+    <input type="radio" name="planeta-selecionado" id="select-venus">
+    <input type="radio" name="planeta-selecionado" id="select-terra">
+    <input type="radio" name="planeta-selecionado" id="select-marte">
+    <input type="radio" name="planeta-selecionado" id="select-jupiter">
+    <input type="radio" name="planeta-selecionado" id="select-saturno">
+    <input type="radio" name="planeta-selecionado" id="select-urano">
+    <input type="radio" name="planeta-selecionado" id="select-netuno">
+
+    <div class="container-principal">
+
+        <div class="espaco">
+            
+            <div class="sol">
+                <img src="./Sol 2.png" alt="Sol">
+            </div>
+
+            <div class="orbita mercurio-orbita"><div class="planeta mercurio"><img src="./Mercúrio.png" alt="Mercúrio"></div></div>
+            <div class="orbita venus-orbita"><div class="planeta venus"><img src="./Vênus.png" alt="Vênus"></div></div>
+            <div class="orbita terra-orbita"><div class="planeta terra"><img src="./Terra.png" alt="Terra"></div></div>
+            <div class="orbita marte-orbita"><div class="planeta marte"><img src="./Marte.png" alt="Marte"></div></div>
+            <div class="orbita jupiter-orbita"><div class="planeta jupiter"><img src="./Júpiter.png" alt="Júpiter"></div></div>
+            <div class="orbita saturno-orbita"><div class="planeta saturno"><img src="./Saturno.png" alt="Saturno"></div></div> 
+            <div class="orbita urano-orbita"><div class="planeta urano"><img src="./Urano.png" alt="Urano"></div></div> 
+            <div class="orbita netuno-orbita"><div class="planeta netuno"><img src="./Netuno.png" alt="Netuno"></div></div>
+
+            <div class="mini-tela card-mercurio">
+                <label for="select-nenhum" class="btn-fechar">X</label>
+                <img src="./Mercúrio.png" alt="Mercúrio">
+                <h2>Mercúrio</h2>
+                <ul>
+                    <li><strong>Tipo:</strong> Planeta Rochoso</li>
+                    <li><strong>Tamanho:</strong> 4.879 km (Diâmetro)</li>
+                    <li><strong>Temperatura:</strong> -180°C à noite até 430°C de dia</li>
+                    <li><strong>Luas:</strong> 0</li>
+                </ul>
+                <p><strong>Curiosidade:</strong> Um ano em Mercúrio passa voando! Ele leva apenas 88 dias terrestres para dar uma volta completa em torno do Sol.</p>
+            </div>
+
+            <div class="mini-tela card-venus">
+                <label for="select-nenhum" class="btn-fechar">X</label>
+                <img src="./Vênus.png" alt="Vênus">
+                <h2>Vênus</h2>
+                <ul>
+                    <li><strong>Tipo:</strong> Planeta Rochoso</li>
+                    <li><strong>Tamanho:</strong> 12.104 km (Diâmetro)</li>
+                    <li><strong>Temperatura:</strong> Cerca de 465°C (O mais quente)</li>
+                    <li><strong>Luas:</strong> 0</li>
+                </ul>
+                <p><strong>Curiosidade:</strong> Em Vênus, o dia é mais longo que o ano! Ele demora mais tempo para dar uma volta em torno de si mesmo do que para dar uma volta ao redor do Sol.</p>
+            </div>
+
+            <div class="mini-tela card-terra">
+                <label for="select-nenhum" class="btn-fechar">X</label>
+                <img src="./Terra.png" alt="Terra">
+                <h2>Terra</h2>
+                <ul>
+                    <li><strong>Tipo:</strong> Planeta Rochoso</li>
+                    <li><strong>Tamanho:</strong> 12.742 km (Diâmetro)</li>
+                    <li><strong>Temperatura:</strong> Média global de 15°C</li>
+                    <li><strong>Luas:</strong> 1 (A nossa Lua)</li>
+                </ul>
+                <p><strong>Curiosidade:</strong> É o único planeta do Sistema Solar que sabemos que possui água líquida na superfície e uma atmosfera perfeita para a vida.</p>
+            </div>
+
+            <div class="mini-tela card-marte">
+                <label for="select-nenhum" class="btn-fechar">X</label>
+                <img src="./Marte.png" alt="Marte">
+                <h2>Marte</h2>
+                <ul>
+                    <li><strong>Tipo:</strong> Planeta Rochoso</li>
+                    <li><strong>Tamanho:</strong> 6.779 km (Diâmetro)</li>
+                    <li><strong>Temperatura:</strong> Média de -65°C</li>
+                    <li><strong>Luas:</strong> 2 (Phobos e Deimos)</li>
+                </ul>
+                <p><strong>Curiosidade:</strong> Marte tem o maior vulcão do sistema solar, o Olympus Mons.</p>
+            </div>
+
+            <div class="mini-tela card-jupiter">
+                <label for="select-nenhum" class="btn-fechar">X</label>
+                <img src="./Júpiter.png" alt="Júpiter">
+                <h2>Júpiter</h2>
+                <ul>
+                    <li><strong>Tipo:</strong> Gigante Gasoso</li>
+                    <li><strong>Tamanho:</strong> 139.820 km (Diâmetro)</li>
+                    <li><strong>Temperatura:</strong> Cerca de -108°C</li>
+                    <li><strong>Luas:</strong> 95 registradas</li>
+                </ul>
+                <p><strong>Curiosidade:</strong> Ele é tão imenso que caberiam mais de 1.300 Planetas Terra dentro dele. A sua famosa mancha vermelha é uma tempestade maior que a Terra que ruge há séculos.</p>
+            </div>
+
+            <div class="mini-tela card-saturno">
+                <label for="select-nenhum" class="btn-fechar">X</label>
+                <img src="./Saturno.png" alt="Saturno">
+                <h2>Saturno</h2>
+                <ul>
+                    <li><strong>Tipo:</strong> Gigante Gasoso</li>
+                    <li><strong>Tamanho:</strong> 116.460 km (Diâmetro)</li>
+                    <li><strong>Temperatura:</strong> Cerca de -139°C</li>
+                    <li><strong>Luas:</strong> 146 registradas (O campeão!)</li>
+                </ul>
+                <p><strong>Curiosidade:</strong> Ele é feito quase todo de gás. Se existisse um oceano grande o suficiente para colocá-lo dentro, Saturno boiaria na água como se fosse uma bola de isopor.</p>
+            </div>
+
+            <div class="mini-tela card-urano">
+                <label for="select-nenhum" class="btn-fechar">X</label>
+                <img src="./Urano.png" alt="Urano">
+                <h2>Urano</h2>
+                <ul>
+                    <li><strong>Tipo:</strong> Gigante Gelado (Gás e Gelo)</li>
+                    <li><strong>Tamanho:</strong> 50.724 km (Diâmetro)</li>
+                    <li><strong>Temperatura:</strong> Cerca de -197°C</li>
+                    <li><strong>Luas:</strong> 28 registradas</li>
+                </ul>
+                <p><strong>Curiosidade:</strong> Urano é o único planeta que gira totalmente deitado em relação à sua órbita, como se fosse uma bola rolando de lado em torno do Sol.</p>
+            </div>
+
+            <div class="mini-tela card-netuno">
+                <label for="select-nenhum" class="btn-fechar">X</label>
+                <img src="./Netuno.png" alt="Netuno">
+                <h2>Netuno</h2>
+                <ul>
+                    <li><strong>Tipo:</strong> Gigante Gelado (Gás e Gelo)</li>
+                    <li><strong>Tamanho:</strong> 49.244 km (Diâmetro)</li>
+                    <li><strong>Temperatura:</strong> Cerca de -201°C (O mais frio)</li>
+                    <li><strong>Luas:</strong> 16 registradas</li>
+                </ul>
+                <p><strong>Curiosidade:</strong> É o planeta dos superventos! Lá acontecem as tempestades mais violentas do Sistema Solar, com ventos que passam dos 2.100 km/h, mais rápidos que a velocidade do som.</p>
+            </div>
+
+        </div> <aside class="sidebar">
+            <h3>Painel de Controle</h3>
+            <p>Selecione um planeta:</p>
+            <nav class="menu-planetas">
+                <label for="select-mercurio">Mercúrio</label>
+                <label for="select-venus">Vênus</label>
+                <label for="select-terra">Terra</label>
+                <label for="select-marte">Marte</label>
+                <label for="select-jupiter">Júpiter</label>
+                <label for="select-saturno">Saturno</label>
+                <label for="select-urano">Urano</label>
+                <label for="select-netuno">Netuno</label>
+            </nav>
+        </aside>
+
+    </div>
+</body>
+</html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,235 @@
+/* ==========================================================
+   RESETS E ESTRUTURA FLEXBOX PRINCIPAL
+   ========================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #050510;
+    overflow: hidden;
+}
+
+/* Esconde os inputs do truque do CSS */
+input[type="radio"] {
+    display: none;
+}
+
+/* O GRANDE FLEXBOX: Divide o Espaço (esquerda) e a Sidebar (direita) */
+.container-principal {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* ==========================================================
+   O ESPAÇO (LADO ESQUERDO)
+   ========================================================== */
+.espaco {
+    flex: 1; /* Faz o espaço pegar todo o tamanho restante da tela */
+    background-color: #050510;
+    background-image: 
+        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px);
+    background-size: 550px 550px, 350px 350px;
+    background-position: 0 0, 40px 60px;
+    position: relative;
+    
+    /* Outro flexbox interno para manter o Sol centralizado nesta metade */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==========================================================
+   A SIDEBAR (LADO DIREITO)
+   ========================================================== */
+.sidebar {
+    width: 250px; /* Largura fixa da barra lateral */
+    height: 100%;
+    background-color: #0b0b18;
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 30px 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar h3 {
+    color: #ffbf00;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+}
+
+.sidebar p {
+    font-size: 13px;
+    color: #aaa;
+}
+
+/* Menu de links dentro da Sidebar */
+.menu-planetas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Transforma as tags label da barra em botões estilosos */
+.menu-planetas label {
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.menu-planetas label:hover {
+    background-color: #ffbf00;
+    color: #050510;
+    font-weight: bold;
+    transform: translateX(-5px);
+}
+
+/* ==========================================================
+   O SOL, ÓRBITAS E PLANETAS
+   ========================================================== */
+.sol {
+    width: 100px; 
+    height: 100px;
+    border-radius: 50%; 
+    box-shadow: 0 0 40px rgba(255, 191, 0, 0.6);
+    z-index: 10;
+}
+.sol img { 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.orbita {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+}
+
+.planeta {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+.planeta img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* REGRAS INDIVIDUAIS DOS SEUS PLANETAS */
+.mercurio-orbita { width: 200px; height: 200px; animation: rotacionar 4s linear infinite; }         
+.mercurio { top: -10px; width: 20px; height: 20px; }
+
+.venus-orbita { width: 260px; height: 260px; animation: rotacionar 7s linear infinite; }
+.venus { top: -11px; width: 22px; height: 22px; }
+
+.terra-orbita { width: 320px; height: 320px; animation: rotacionar 10s linear infinite; }
+.terra { top: -12.5px; width: 25px; height: 25px; }
+
+.marte-orbita { width: 400px; height: 400px; animation: rotacionar 12s linear infinite; }
+.marte { top: -10px; width: 20px; height: 20px; }
+
+.jupiter-orbita { width: 500px; height: 500px; animation: rotacionar 15s linear infinite; }
+.jupiter { top: -17.5px; width: 35px; height: 35px; }
+
+.saturno-orbita { width: 590px; height: 590px; animation: rotacionar 22s linear infinite; }
+.saturno { top: -40px; width: 80px; height: 80px; }
+.saturno img { object-fit: contain; border-radius: 0% !important; }
+
+.urano-orbita { width: 680px; height: 680px; animation: rotacionar 30s linear infinite; }
+.urano { top: -14px; width: 28px; height: 28px; }
+
+.netuno-orbita { width: 780px; height: 780px; animation: rotacionar 40s linear infinite; }
+.netuno { top: -13px; width: 26px; height: 26px; }
+
+/* ==========================================================
+   SISTEMA DE MINI TELAS (CARDS DE INFORMAÇÃO)
+   ========================================================== */
+.mini-tela {
+    display: none; /* Escondido por padrão */
+    position: absolute;
+    width: 280px;
+    background-color: rgba(11, 11, 24, 0.95);
+    border: 2px solid #ffbf00;
+    border-radius: 12px;
+    padding: 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    z-index: 2000; /* Fica acima de tudo no centro */
+}
+
+/* Imagem gigante dentro da mini tela */
+.mini-tela img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: 0 auto 15px auto;
+    display: block;
+}
+
+.mini-tela h2 {
+    font-size: 20px;
+    color: #ffbf00;
+    margin-bottom: 10px;
+}
+
+.mini-tela p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+/* O Botão de fechar (X) no topo direito do card */
+.btn-fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #aaa;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+.btn-fechar:hover {
+    color: red;
+}
+
+/* ==========================================================
+   A MÁGICA: INTERLIGANDO O CLIQUE DA SIDEBAR COM OS CARDS
+   ========================================================== */
+#select-mercurio:checked ~ .container-principal .card-mercurio { display: block; }
+#select-venus:checked    ~ .container-principal .card-venus    { display: block; }
+#select-terra:checked    ~ .container-principal .card-terra    { display: block; }
+#select-marte:checked    ~ .container-principal .card-marte    { display: block; }
+#select-jupiter:checked  ~ .container-principal .card-jupiter  { display: block; }
+#select-saturno:checked  ~ .container-principal .card-saturno  { display: block; }
+#select-urano:checked    ~ .container-principal .card-urano    { display: block; }
+#select-netuno:checked   ~ .container-principal .card-netuno   { display: block; }
+
+/* ==========================================================
+   ANIMAÇÃO DE ROTAÇÃO
+   ========================================================== */
+@keyframes rotacionar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
